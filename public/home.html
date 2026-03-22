@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=VT323&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+   <div id="loading-screen">
+        <div class="terminal">
+            <p id="loading-text">INICIALIZANDO SISTEMA...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress-inner"></div>
+            </div>
+            <p class="hint" id="hint-text">AGUARDE A SINCRONIZAÇÃO NEURAL</p>
+        </div>
+    </div>
+
+
+    <div class="bg-overlay"></div>
+    <div class="scanlines"></div>
+
+    
+    <div id="main-ui" class="main-content">
+        <header>
+            <img src="img/cyberpunk-2077-seeklogo.png" alt="">
+            <nav> 
+                <a href="home.html" target="_blank" >Home </a>
+                <a href="história.html" target="_blank">História</a>
+                <a href="personagem.html" target="_blank">Personagens</a>
+                <a href="curiosidade.html" target="_blank">Curiosidade</a>
+            </nav> 
+        </header>
+
+        <main>
+            <img src="img/cyberpunk-2077-seeklogo.png" alt="">
+            <p>BEM-VINDO A NIGHT CITY</p>
+            <button class="btn-cyber" onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'})">EXPLORAR</button>
+       </main>
+
+        <section id="sobre">
+            <h2>SOBRE O JOGO</h2>
+            <p>Cyberpunk 2077 é um RPG de mundo aberto ambientado em uma cidade futurista dominada por tecnologia, poder e modificações corporais. Você assume o papel de V, um mercenário em busca de um implante único que detém a chave da imortalidade.</p>
+        </section>
+
+        <section class="form-section">
+    <h2>ACESSO À REDE</h2>
+
+    <form class="form">
+        <input type="email" placeholder="Seu email" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit" class="btn-cyber">ENTRAR</button>
+    </form>
+</section>
+
+<footer>
+    <p>PROJETO CYBERPUNK © 2026 // PARA UM FUTURO DISTÓPICO</p>
+</footer>
+
+</body>
+</html>

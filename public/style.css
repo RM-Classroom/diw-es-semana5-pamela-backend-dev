@@ -1,3 +1,234 @@
-body {
-    background-color: aquamarine;
+/* --- CSS (Equivalente ao style.css / cyberpunk.css) --- */
+        :root {
+            --cp-yellow: #fcee0a;
+            --cp-purple: #9d00ff;
+            --cp-purple-soft: #6f00b8;
+            --cp-blue: #00f0ff;
+            --cp-blue-soft: #00b8cc;
+            --cp-red: #ff003c;
+            --cp-red-soft: #cc002f;
+            --cp-bg: #050505;
+            
+            /* TEXTO */
+            --cp-text: white;
+            --cp-text-dim: #9aa0c3;
 }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--cp-bg);
+            color: var(--cp-text);
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            text-transform: uppercase;
+        }
+
+        /* Tela de Carregamento */
+        #loading-screen {
+            position: fixed;
+            inset: 0;
+            background: black;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'VT323', monospace;
+        }
+
+        .terminal {
+            width: 90%;
+            max-width: 600px;
+            color: var(--cp-yellow);
+        }
+
+        #loading-text {
+            font-size: 1.5rem;
+            min-height: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(252, 238, 10, 0.1);
+            border: 1px solid var(--cp-yellow);
+            position: relative;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background: var(--cp-yellow);
+            box-shadow: 0 0 15px var(--cp-yellow);
+            transition: width 0.1s linear;
+        }
+
+        .hint {
+            margin-top: 1.5rem;
+            text-align: center;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .hint.active {
+            animation: pulse 1.5s infinite;
+            opacity: 1;
+        }
+
+        @keyframes pulse { 50% { opacity: 0.2; } }
+
+        /* Background & Scanlines */
+        .bg-overlay {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                        url('img/Night\ City\,\ Cyberpunk\ 2077\ [3840x2160].jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 500;
+            opacity: 0.3;
+        }
+
+        /* Header e Nav Original */
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 3px solid var(--cp-yellow);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 98% 100%, 0 100%);
+        }
+
+        header img {
+            height: 40px;
+            letter-spacing: -1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--cp-blue);
+            text-shadow: 0 0 10px var(--cp-blue);
+        }
+
+    
+        main {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        main img {
+            height: 250px;
+            filter: drop-shadow(5px 5px 0px var(--cp-red));
+            margin-bottom: 1.0rem;
+            mix-blend-mode: multiply;
+}
+
+
+        main p {
+            color: var(--cp-blue);
+            font-size: 1.5rem;
+            letter-spacing: 8px;
+            margin-bottom: 2rem;
+        }
+
+        /* Botão Cyberpunk */
+        .btn-cyber {
+            background: transparent;
+            color: var(--cp-blue);
+            border: 1px solid var(--cp-blue);
+            padding: 15px 45px;
+            font-weight: 700;
+            cursor: pointer;
+            clip-path: polygon(15% 0, 100% 0, 100% 70%, 85% 100%, 0 100%, 0 30%);
+            transition: 0.3s;
+        }
+
+        .btn-cyber:hover {
+            background: var(--cp-purple);
+            color: black;
+            box-shadow: 0 0 20px var(--cp-purple);
+            transform: scale(1.05);
+        }
+
+    
+        section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(10, 10, 10, 0.9);
+            border-left: 5px solid var(--cp-blue);
+            clip-path: polygon(0 0, 98% 0, 100% 2%, 100% 100%, 2% 100%, 0 98%);
+        }
+
+        section h2 {
+            color: var(--cp-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            border-bottom: 2px solid var(--cp-blue-soft);
+        }
+
+        section p {
+            line-height: 1.8;
+            color: #ddd;
+            font-size: 1.1rem;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: #000;
+            border-top: 2px solid var(--cp-blue);
+            color: var(--cp-blue);
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        /* Controle de Exibição */
+        .main-content {
+            display: none;
+            opacity: 0;
+        }
+
+        .show-content {
+            display: block !important;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
