@@ -18,6 +18,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            
         }
 
         body {
@@ -206,6 +207,71 @@
             font-size: 1.1rem;
         }
 
+        .grid-cartas {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        justify-items: center;
+        }
+
+        .card-tarot {
+    position: relative;
+    width: 260px;
+    height: 420px;
+    border: 2px solid var(--cp-red);
+    overflow: hidden;
+    background: black;
+    transition: 0.3s;
+}
+
+        /* IMAGEM */
+        .card-tarot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6) contrast(1.2);
+            transition: 0.4s;
+        }
+
+        /* OVERLAY */
+        .card-info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.95));
+        }
+
+        /* TITULO */
+        .card-info h3 {
+            color: var(--cp-red);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* TEXTO */
+        .card-info p {
+            font-size: 0.85rem;
+            color: #bbb;
+            margin-bottom: 10px;
+        }
+
+        /* ESTRELAS */
+        .rating {
+            color: var(--cp-yellow);
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+        }
+
+        /* HOVER */
+        .card-tarot:hover {
+            box-shadow: 0 0 25px var(--cp-red);
+            transform: translateY(-5px) scale(1.03);
+        }
+
+        .card-tarot:hover img {
+            transform: scale(1.1);
+        }
 
         footer {
             text-align: center;
