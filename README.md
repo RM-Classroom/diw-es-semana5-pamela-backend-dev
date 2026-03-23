@@ -16,8 +16,11 @@ Diferente de uma fan page convencional, o site busca proporcionar uma experiênc
 
 ## Print da home-page criada
 
-[Print do(s) wireframe(s) criado](public/img_readme/captura_tela_carregamento.png)
-[Print do(s) wireframe(s) criado](public/img_readme/captura_homepage.png)
-[Print do(s) wireframe(s) criado](public/img_readme/captura_homepage2.png)
-[Print do(s) wireframe(s) criado](public/img_readme/captura_personagens.png)
+[Print da home-page criada](public/img_readme/captura_tela_carregamento.png)
+
+[Print da home-page criada](public/img_readme/captura_homepage.png)
+
+[Print da home-page criada](public/img_readme/captura_homepage2.png)
+
+[Print da home-page criada](public/img_readme/captura_personagens.png)
 
