@@ -177,9 +177,9 @@
         }
 
         .btn-cyber:hover {
-            background: var(--cp-purple);
+            background: var(--cp-yellow);
             color: black;
-            box-shadow: 0 0 20px var(--cp-purple);
+            box-shadow: 0 0 20px var(--cp-yellow);
             transform: scale(1.05);
         }
 
@@ -209,19 +209,19 @@
 
         .grid-cartas {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         justify-items: center;
         }
 
         .card-tarot {
-    position: relative;
-    width: 260px;
-    height: 420px;
-    border: 2px solid var(--cp-red);
-    overflow: hidden;
-    background: black;
-    transition: 0.3s;
+        position: relative;
+        width: 260px;
+        height: 420px;
+        border: 2px solid var(--cp-red);
+        overflow: hidden;
+        background: black;
+        transition: 0.3s;
 }
 
         /* IMAGEM */
@@ -229,7 +229,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.6) contrast(1.2);
+            filter: contrast(1.2);
             transition: 0.4s;
         }
 
@@ -258,7 +258,7 @@
 
         /* ESTRELAS */
         .rating {
-            color: var(--cp-yellow);
+            color: var(--cp-blue-soft);
             font-size: 1.1rem;
             letter-spacing: 4px;
         }
@@ -267,6 +267,8 @@
         .card-tarot:hover {
             box-shadow: 0 0 25px var(--cp-red);
             transform: translateY(-5px) scale(1.03);
+            overflow: hidden;
+
         }
 
         .card-tarot:hover img {
