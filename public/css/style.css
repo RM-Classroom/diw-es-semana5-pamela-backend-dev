@@ -83,7 +83,7 @@ body {
     position: fixed;
     inset: 0;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-                url('public/img/Night City, Cyberpunk 2077 [3840x2160].jpg');
+                url('../img/Night City.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -148,6 +148,7 @@ main {
 }
 
 main img {
+    
     max-width: 90%;
     height: auto;
     max-height: 250px;
@@ -182,7 +183,7 @@ main p {
 section {
     max-width: 1000px;
     margin: 60px auto;
-    padding: 40px 30px;
+    padding: 100px 70px;
     background: rgba(10, 10, 10, 0.9);
     border-left: 5px solid var(--cp-blue);
 }
@@ -201,6 +202,17 @@ section p {
     font-size: 1rem;
 }
 
+#sobre {
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#sobre img {
+    width: 50%;
+    max-width: 500px;
+    
+}
 .grid-cartas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
